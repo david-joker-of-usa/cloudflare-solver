@@ -3,5 +3,9 @@ services:
     build: .
     image: turnstile-solver
     ports:
-      - "407-436:407"
+      - "407:407"
+    environment:
+      - BROWSERS=1
+      - TABS=3
+      - timeOut=29000
     restart: unless-stopped
